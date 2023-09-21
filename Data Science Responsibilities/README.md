@@ -1,5 +1,6 @@
 ## Python Syllabus
 ### 1. Introduction to Python
+Python is a versatile and popular programming language known for its simplicity, readability, and a wide range of applications. It was created by Guido van Rossum and first released in 1991. 
 ### 2. Variables in Python
 ```python
 x = 10
@@ -53,12 +54,12 @@ my_memoryview = memoryview(b'Hello')                # Memoryview
 ```python
 my_none = None  # NoneType
 ```
-### User Input & Type Casting in Python
+### 4. User Input & Type Casting in Python
 ```python
 user_input = input("Enter a number: ")
 num = int(user_input)  # Casting user input to an integer
 ```
-### 4. Python Operators
+### 5. Python Operators
 - **Arithmetic Operators in Python**
   - Addition (+)
   - Subtraction (-)
@@ -165,7 +166,7 @@ bitwise_not_x = ~x     # Bitwise NOT for x
 left_shift = x << 2    # Left shift x by 2 bits
 right_shift = x >> 1   # Right shift x by 1 bit
 ```
-### 5. Conditional Statements:
+### 6. Conditional Statements:
   - If, If Else & If Elif Else Conditional Statements in Python
 ```python
     x = 3
@@ -176,7 +177,7 @@ right_shift = x >> 1   # Right shift x by 1 bit
     else:
         print("x is less than 5")
 ```
-### 6. Loops in Python:
+### 7. Loops in Python:
   - For Loop with Range () in Python
   - While Loop in Python
 ```python
@@ -190,7 +191,7 @@ while count < 5:  # Loop until count is less than 5
     print("Count:", count)
     count += 1
 ```
-### 7. String Manipulation
+### 8. String Manipulation
   - **String Concatenation in Python**
 ```python
       first_name = "John"
@@ -241,7 +242,7 @@ print("My name is {} and I am {} years old.".format(name, age))
 # Using f-strings (Python 3.6+)
 print(f"My name is {name} and I am {age} years old.")
 ```
-### List Manipulation
+### 9. List Manipulation
   - **List Iteration in Python**
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -294,7 +295,7 @@ my_queue = deque()
 my_queue.append(1)  # Enqueue an element
 dequeued_element = my_queue.popleft()  # Dequeue an element
 ```
-### Dictionary Manipulation
+### 10. Dictionary Manipulation
   - **Creating a Dictionary:**
 ```python
 my_dict = {"name": "Alice", "age": 30, "city": "New York"}
@@ -411,7 +412,7 @@ def switch_case(option):
     }
     return switch_dict.get(option, "Invalid Option")
 ```
-### Tuples Manipulation
+### 11. Tuples Manipulation
   - **Creating a Tuple:**
 ```python
 my_tuple = (1, 2, 3, 4, 5)
@@ -523,7 +524,7 @@ my_tuple[0] = 10  # This will result in an error because tuples are immutable.
 ```python
 is_present = 5 in my_tuple  # Check if 5 is present in the tuple
 ```
-### Set Manipulation
+### 12. Set Manipulation
   - **Adding Elements to a Set:**
 ```python
 my_set.add(6)  # Adding a single element
@@ -618,7 +619,7 @@ set1 = {1, 2, 3}
 set2 = {4, 5, 6}
 are_disjoint = set1.isdisjoint(set2)  # Check if two sets are disjoint (no common elements)
 ```
-### Fuctions in Python
+### 13. Fuctions in Python
   - **Built-in Functions**:
 These are functions that are built into the Python language and are available for use without the need to import any additional modules. Examples include print(), len(), max(), min(), and range().
    ```python
@@ -716,7 +717,7 @@ These are functions that are built into the Python language and are available fo
    greeting = my_module.greet("John")
    print(greeting)  # Output: "Hello, John!"
    ```
-### Modules in Python
+### 14. Modules in Python
 
 Modules in Python are files that contain Python code, including functions, variables, and classes, which can be reused in other Python scripts. You can import modules using the `import` statement. Here's how it works:
 
@@ -825,7 +826,7 @@ with open("data.pkl", "wb") as file:
 with open("data.pkl", "rb") as file:
     loaded_data = pickle.load(file)
 ```
-### JSON in Python
+### 15. JSON in Python
 
 JSON (JavaScript Object Notation) is a lightweight data interchange format. In Python, you can work with JSON data using the `json` module.
 
@@ -854,4 +855,77 @@ with open("data.json", "w") as file:
 # Read data from a JSON file
 with open("data.json", "r") as file:
     loaded_data = json.load(file)
+```
+### 16. Object-Oriented Programming (OOP) in Python
+  - **Objects are like Things:** Think of objects as things or stuff. Just like you have objects in the real world (like a car, a book, or a person), you can create objects in Python.
+
+  - **Classes are like Blueprints:** Imagine a class as a blueprint or a plan for creating objects. It defines what an object will be like and what it can do. For example, a class for a "Car" can define how a car looks and what actions it can perform (like driving or honking).
+
+  - **Attributes are like Properties:** Objects have attributes, which are like their properties. For instance, a car object might have attributes like "color," "brand," and "speed."
+
+  - **Methods are like Actions:** Objects can also do things, and these actions are defined using methods. In our car example, a method could be "start" to make the car go.
+
+**Here's a simpler example in Python**
+
+```python
+# Define a class called "Cat"
+class Cat:
+    def __init__(self, name, color):
+        self.name = name   # "name" is an attribute
+        self.color = color
+
+    def meow(self):
+        return f"{self.name} says Meow!"  # "meow" is a method
+
+# Create a cat object
+my_cat = Cat("Whiskers", "gray")
+
+# Access attributes and call methods
+print(my_cat.name)     # Output: Whiskers
+print(my_cat.color)    # Output: gray
+print(my_cat.meow())   # Output: Whiskers says Meow!
+```
+### 17. Error Handling in Python
+
+Error handling is a crucial aspect of programming that allows you to gracefully handle unexpected situations or errors that may occur during the execution of a program. Python provides a robust error handling mechanism through exceptions. Here's an explanation of error handling in Python:
+
+  - **Syntax Errors:** These occur when the code violates the rules of the Python language. They are typically detected by the Python interpreter during compilation and prevent the code from running. Common examples include missing colons, unmatched parentheses, and misspelled keywords.
+
+```python
+   if x = 5:  # SyntaxError: invalid syntax
+       print("Hello")
+```
+  - **Runtime Errors (Exceptions):** These occur during program execution when something unexpected happens. Python provides a wide range of built-in exceptions to handle different types of errors. Common exceptions include:
+   
+     - `ZeroDivisionError`: Raised when attempting to divide by zero.
+     - `TypeError`: Raised when an operation is performed on an inappropriate data type.
+     - `ValueError`: Raised when a function receives an argument of the correct data type but with an inappropriate value.
+     - `FileNotFoundError`: Raised when attempting to open or manipulate a file that doesn't exist.
+     - `IndexError`: Raised when trying to access an index that is out of range in a sequence.
+     - `KeyError`: Raised when trying to access a dictionary key that doesn't exist.
+     - `NameError`: Raised when using a variable or name that is not defined.
+```python
+   try:
+       result = 10 / 0  # ZeroDivisionError
+   except ZeroDivisionError as e:
+       print(f"Error: {e}")
+```
+- **Python Exception Handling:** Python provides a structured way to handle exceptions using the `try`, `except`, `else`, and `finally` blocks.
+
+     - `try`: This block contains the code that might raise an exception.
+    - `except`: This block is executed when an exception is raised. You can specify the type of exception to catch.
+    - `else`: This block is executed if no exception is raised in the `try` block.
+    - `finally`: This block is always executed, regardless of whether an exception occurred or not. It's often used for cleanup operations.
+
+**Example:**
+
+```python
+try:
+    x = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+else:
+    print("No exception occurred")
+finally:
+    print("Finally block always executes")
 ```
