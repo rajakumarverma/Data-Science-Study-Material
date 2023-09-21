@@ -1,4 +1,4 @@
-## Python Syllabus
+## Python
 ### 1. Introduction to Python
 Python is a versatile and popular programming language known for its simplicity, readability, and a wide range of applications. It was created by Guido van Rossum and first released in 1991. 
 ### 2. Variables in Python
